@@ -56,7 +56,168 @@
         </div>
         <!-- 主要内容 -->
         <div id="content">
+            <!-- 左侧 -->
+            <div class="con-left">
+                <ul>
+                    <li>推荐</li>
+                    <li>苹果</li>
+                    <li>小米</li>
+                    <li>OPPO</li>
+                    <li>荣耀</li>
+                </ul>
+            </div>
+            <!-- 右侧 -->
+            <div class="con-right">
 
+                <!-- 菜单列表 -->
+
+                <div id="product">
+                    <div class="list">
+                        <div class="title">
+                            推荐
+                        </div>
+                        <ul>
+                            <li v-for="phone in phones1">
+                                <div class="pic">
+                                    <img v-bind:src="phone.img" />
+                                </div>
+                                <div class="intro">
+                                    <p>{{phone.name}}</p>
+                                    <p>{{phone.info}}</p>
+                                    <p>官方指导价：<span class="price">{{phone.price}}</span>
+                                        <span>起</span>
+                                    </p>
+                                    <p>
+                                        <span>赠送</span>
+                                        <span>{{phone.activity}}</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <div class="title">
+                            苹果
+                        </div>
+                        <ul>
+                            <li v-for="phone in phones2">
+                                <div class="pic">
+                                    <img v-bind:src="phone.img" />
+                                </div>
+                                <div class="intro">
+                                    <p>{{phone.name}}</p>
+                                    <p>{{phone.info}}</p>
+                                    <p>官方指导价：<span class="price">{{phone.price}}</span>
+                                        <span>起</span>
+                                    </p>
+                                    <p>
+                                        <span>赠送</span>
+                                        <span>{{phone.activity}}</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 小米 -->
+                    <div class="list">
+                        <div class="title">
+                            小米
+                        </div>
+                        <ul>
+                            <li v-for="phone in phones3">
+                                <div class="pic">
+                                    <img v-bind:src="phone.img" />
+                                </div>
+                                <div class="intro">
+                                    <p>{{phone.name}}</p>
+                                    <p>{{phone.info}}</p>
+                                    <p>官方指导价：<span class="price">{{phone.price}}</span>
+                                        <span>起</span>
+                                    </p>
+                                    <p>
+                                        <span>赠送</span>
+                                        <span>{{phone.activity}}</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- OPPO -->
+                    <div class="list">
+                        <div class="title">
+                            OPPO
+                        </div>
+                        <ul>
+                            <li v-for="phone in phones4">
+                                <div class="pic">
+                                    <img v-bind:src="phone.img" />
+                                </div>
+                                <div class="intro">
+                                    <p>{{phone.name}}</p>
+                                    <p>{{phone.info}}</p>
+                                    <p>官方指导价：<span class="price">{{phone.price}}</span>
+                                        <span>起</span>
+                                    </p>
+                                    <p>
+                                        <span>赠送</span>
+                                        <span>{{phone.activity}}</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- realme -->
+                    <div class="list">
+                        <div class="title">
+                            realme
+                        </div>
+                        <ul>
+                            <li v-for="phone in phones5">
+                                <div class="pic">
+                                    <img v-bind:src="phone.img" />
+                                </div>
+                                <div class="intro">
+                                    <p>{{phone.name}}</p>
+                                    <p>{{phone.info}}</p>
+                                    <p>官方指导价：<span class="price">{{phone.price}}</span>
+                                        <span>起</span>
+                                    </p>
+                                    <p>
+                                        <span>赠送</span>
+                                        <span>{{phone.activity}}</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 荣耀 -->
+                    <div class="list">
+                        <div class="title">
+                            荣耀
+                        </div>
+                        <ul>
+                            <li v-for="phone in phones6">
+                                <div class="pic">
+                                    <img v-bind:src="phone.img" />
+                                </div>
+                                <div class="intro">
+                                    <p>{{phone.name}}</p>
+                                    <p>{{phone.info}}</p>
+                                    <p>官方指导价：<span class="price">{{phone.price}}</span>
+                                        <span>起</span>
+                                    </p>
+                                    <p>
+                                        <span>赠送</span>
+                                        <span>{{phone.activity}}</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </main>
     <!-- 底部 -->
@@ -86,3 +247,94 @@
 </body>
 
 </html>
+<script src="js/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#product",
+        data: {
+            phones1: [{
+                img: "images/product1.jpg",
+                name: "苹果 iPhone 12",
+                info: "支持移动联通电信 5G 双卡双待手机",
+                price: "￥6799",
+                activity: "以旧换新补贴最高￥500"
+
+            }, {
+                img: "images/product2.jpg",
+                name: "苹果 iPhone 12 Pro Max",
+                info: "支持移动联通电信 5G 双卡双待手机",
+                price: "￥10099",
+                activity: "以旧换新补贴最高￥500"
+            }, {
+                img: "images/product7.jpg",
+                name: "OPPO Reon 5 Pro",
+                info: "6400万水光人像四摄 65W超级闪充",
+                price: "￥3399",
+                activity: "以旧换新补贴最高￥300"
+
+            }, {
+                img: "images/product8.jpg",
+                name: "realme 真我V11（5G版）",
+                info: "双5G 超大存储 5000mAh超大电池 8.4mm超薄机身 侧边指纹",
+                price: "￥1199",
+                activity: "以旧换新补贴最高￥200"
+
+            }],
+            phones2: [{
+                img: "images/product1.jpg",
+                name: "苹果 iPhone 12",
+                info: "支持移动联通电信 5G 双卡双待手机",
+                price: "￥6799",
+                activity: "以旧换新补贴最高￥500"
+
+            }, {
+                img: "images/product2.jpg",
+                name: "苹果 iPhone 12 Pro",
+                info: "支持移动联通电信 5G 双卡双待手机",
+                price: "￥9299",
+                activity: "以旧换新补贴最高￥500"
+            }, {
+                img: "images/product2.jpg",
+                name: "苹果 iPhone 12 Pro Max",
+                info: "支持移动联通电信 5G 双卡双待手机",
+                price: "￥10099",
+                activity: "以旧换新补贴最高￥500"
+            }],
+            phones3: [{
+                img: "images/product5.jpg",
+                name: "Redmi 9",
+                info: "5020mAh大电量 1080P全高清大屏 大字体大音量大内存 全场景AI４摄　高性能游戏芯",
+                price: "￥899",
+                activity: "以旧换新补贴最高￥60"
+
+            }],
+            phones4: [{
+                img: "images/product7.jpg",
+                name: "OPPO Reon 5 Pro",
+                info: "6400万水光人像四摄 65W超级闪充",
+                price: "￥3399",
+                activity: "以旧换新补贴最高￥300"
+            }],
+            phones5: [{
+                img: "images/product8.jpg",
+                name: "realme 真我V11（5G版）",
+                info: "双5G 超大存储 5000mAh超大电池 8.4mm超薄机身 侧边指纹",
+                price: "￥1199",
+                activity: "以旧换新补贴最高￥200"
+            }],
+            phones6: [{
+                img: "images/product6.jpg",
+                name: "荣耀 X10 Max （5G版）",
+                info: "荣耀X10 Max 5G双模 7.09英寸阳光屏 5000mAh大电池 4800万高感光影像系统",
+                price: "￥2499",
+                activity: "以旧换新补贴最高￥100"
+            }, {
+                img: "images/product4.jpg",
+                name: "荣耀 X10（5G版）",
+                info: "5G双模 麒麟820 4300mAh续航 4000万高感光影像系统 6.63英寸升降全面屏 全网通",
+                price: "￥2399",
+                activity: "以旧换新补贴最高￥100"
+            }]
+        }
+    });
+</script>
