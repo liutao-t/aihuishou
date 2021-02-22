@@ -1,0 +1,183 @@
+    #user {
+        margin-top: .09rem;
+        padding-left: .17rem;
+    }
+    
+    .user-con {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+    }
+    
+    .user-left {
+        width: .48rem;
+        height: .48rem;
+        position: relative;
+    }
+    
+    .user-left img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .user-right {
+        width: 100%;
+        margin-left: .13rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .user-right a {
+        display: inline-block;
+        width: 100%;
+        margin-left: .13rem;
+        display: flex;
+        flex-direction: column;
+        font-size: .2rem;
+        color: #333;
+        line-height: .21rem;
+    }
+    
+    .user-right>p:nth-child(1) {
+        font-size: .2rem;
+        color: #333;
+        line-height: .21rem;
+    }
+    
+    .user-right>p:nth-child(2) {
+        display: block;
+        background-image: url(../images/mine-bg.png);
+        margin-top: .05rem;
+        height: .16rem;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    
+    .user-con #set {
+        font-size: .13rem;
+        color: #333;
+        line-height: .48rem;
+        position: absolute;
+        right: .18rem;
+        top: 0;
+    }
+    /* 卡卷包 */
+    
+    #package {
+        display: flex;
+        margin-top: .15rem;
+        padding: 0 .16rem;
+        font-size: 0.1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #package .box {
+        width: 45%;
+        height: .6rem;
+        background-color: #fff;
+        box-shadow: 0 .08rem .2rem 0 rgba(207, 213, 215, .3);
+        border-radius: .04rem;
+        padding-left: .11rem;
+        position: relative;
+    }
+    
+    #package .box .text {
+        display: flex;
+        flex-direction: column;
+        line-height: .26rem;
+        justify-content: space-around;
+    }
+    
+    #package .box .title {
+        line-height: .17rem;
+        display: block;
+        margin-top: .09rem;
+    }
+    
+    #package .box .tip {
+        color: #999;
+    }
+    
+    #package .box .pho {
+        width: .34rem;
+        height: .34rem;
+        display: block;
+        position: absolute;
+        top: .09rem;
+        right: .11rem;
+    }
+    
+    #package .box .pho img {
+        width: 100%;
+        height: 100%;
+    }
+    /* 订单 */
+    
+    #order {
+        margin-top: .2rem;
+        padding: 0 .2rem;
+    }
+    
+    #order h3 {
+        font-size: .16rem;
+        color: #333;
+        line-height: .22rem;
+    }
+    
+    .order-list {
+        margin-top: .18rem;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .order-list aside {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: .1rem;
+    }
+    
+    .order-list aside img {
+        width: .24rem;
+        height: .24rem;
+        margin: 0 auto;
+    }
+    
+    .order-list aside span {
+        color: #333;
+        font-size: .13rem;
+        line-height: .18rem;
+        margin-top: .06rem;
+        display: block;
+        font-weight: 400;
+    }
+    
+    #render {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #render li a {
+        flex: 1 1;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding-bottom: .1rem;
+    }
+    
+    #render li img {
+        height: 100%;
+        width: 100%;
+    }

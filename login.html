@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        .register {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="mine.html">
+            <i class="iconfont icon-jiantou
+        "></i>
+        </a>
+        <p>
+            登录
+        </p>
+    </header>
+    <main>
+        <!-- 轮播图 -->
+        <div class="banner">
+            <img src="images/login_banner.png" alt="">
+        </div>
+        <!-- 注册题目 -->
+        <div class="top">
+            <span id="denglu" class="active">登录</span>
+            <span id="zhuce">注册</span>
+        </div>
+        <div class="login">
+            <!-- 账号 -->
+            <div class="user">
+                <div class="tip">
+                    <span>账号</span>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="user" placeholder="爱回收账号">
+                </div>
+            </div>
+            <!-- 密码 -->
+            <div class="password">
+                <div class="tip">
+                    <span>密码</span>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="密码">
+                </div>
+            </div>
+            <!-- 登录按钮 -->
+            <div class="submit">
+                <span class="btn" id="login">登录</span>
+            </div>
+        </div>
+        <!-- 注册 -->
+        <div class="register">
+            <!-- 账号 -->
+            <div class="user">
+                <div class="tip">
+                    <span>账号</span>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="user" placeholder="爱回收账号">
+                </div>
+            </div>
+            <!-- 密码 -->
+            <div class="password">
+                <div class="tip">
+                    <span>密码</span>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="密码">
+                </div>
+            </div>
+            <!-- 确认密码 -->
+            <div class="aginpwd">
+                <div class="tip">
+                    <span>确认密码</span>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="aginpwd" placeholder="确认密码">
+                </div>
+            </div>
+            <!-- 注册按钮 -->
+            <div class="submit">
+                <span class="btn" id="register">注册</span>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $("#login").click(function() {
+            let http = new XMLHttpRequest()
+            http.open("get", `http://127.0.0.1:8080/login?user=${$("#user").val()}&password=${$("#password").val()}`)
+            http.send()
+            http.onreadystatechange = function() {
+                if (http.readyState === 4) {
+                    if (http.responseText === "success") {
+                        alert("登录成功")
+                        location.href = "http://127.0.0.1/aihuishou/index.html"
+                    } else {
+                        alert("用户名或密码错误")
+                    }
+                }
+            }
+        })
+        $("#register").click(function() {
+
+            let http = new XMLHttpRequest()
+            http.open("get", `http://127.0.0.1:8080/addUser?user=${$("#user").val()}&password=${$("#password").val()}=${$("#usercode").val()}`)
+            http.send()
+            http.onreadystatechange = function() {
+                if (http.readyState === 4) {
+                    if (http.responseText === "success") {
+                        alert("注册新用户成功，点击去登录");
+                        location.href = "http://127.0.0.1/aihuishou/login.html";
+                    } else {
+                        alert("注册失败")
+                    }
+                }
+            }
+        })
+    </script>
+    <script>
+        $("#denglu").click(function() {
+            $(".register").hide()
+            $(".login").show()
+            $("#denglu").addClass("active")
+            $("#zhuce").removeClass("active");
+        })
+        $("#zhuce").click(function() {
+            $(".register").show();
+            $(".login").hide();
+            $("#denglu").removeClass("active");
+            $("#zhuce").addClass("active");
+        })
+    </script>
+    <script>
+    </script>
+</body>
+
+</html>
